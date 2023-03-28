@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            position: relative;
+            background-color: aqua;
+        }
+        #a{
+            width: 220px;
+            position: relative;
+        }
+        #up
+        {
+            width: 100px;
+            position: absolute;
+            bottom: 200px;
+            right: 35%;
+            rotate: 90deg;
+        }
+        #down
+        {
+            width: 100px;
+            position: absolute;
+            bottom: 100px;
+            right: 35%;
+            rotate: -90deg;
+        }
+        #left
+        {
+            width: 100px;
+            position: absolute;
+            bottom: 150px;
+            left: -20px;
+        }
+        #right
+        {
+            width: 100px;
+            position: absolute;
+            bottom: 150px;
+            right: 10%;
+            rotate: 180deg;
+        }
+        #keyboard{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 350px;
+            left: 45%;
+        }
+        #ins{
+            font-size: 20px;
+            font-weight: bold;
+            color: orangered;
+            padding-left: 100px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <img src="C:\Users\manikantaswami\Downloads\g.gif" id="a">
+    <br><br><br>
+    <div id="keyboard">
+        <img src="C:\Users\manikantaswami\Downloads\7-2-arrow-png-picture-thumb.png" id="left" onclick="leftb()">
+        <img src="C:\Users\manikantaswami\Downloads\7-2-arrow-png-picture-thumb.png" id="up" onclick="upb()">
+        <img src="C:\Users\manikantaswami\Downloads\7-2-arrow-png-picture-thumb.png" id="right" onclick="rightb()">
+        <img src="C:\Users\manikantaswami\Downloads\7-2-arrow-png-picture-thumb.png" id="down" onclick="downb()">
+    </div>
+    <script>
+        var hor=0;
+        var vir=0;
+        function rightb()
+        {
+            hor++;
+            document.getElementById("a").style.left=hor+"%"
+            document.getElementById("a").style.rotate="0deg"
+        }
+        function leftb()
+        {
+            hor--;
+            document.getElementById("a").style.left=hor+"%"
+            document.getElementById("a").style.rotate="180deg"
+        }
+        function upb()
+        {
+            vir++;
+            document.getElementById("a").style.bottom=(vir*10)+"px"
+            document.getElementById("a").style.rotate="-90deg"
+        }
+        function downb()
+        {
+            vir--;
+            document.getElementById("a").style.bottom=(vir*10)+"px"
+            document.getElementById("a").style.rotate="90deg"
+        }
+    </script>
+</body>
+</html>
